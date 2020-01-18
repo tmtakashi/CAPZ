@@ -28,7 +28,8 @@ def capz(N, M, P, Q, h_r):
     B : numpy ndarray (M, Q)
         Estimated MA coefficients for each measured room impulse response.
     '''
-    assert h_r.shape = (M, N), 'The shape of h_r needs to be ({}, {}), instead of '.format(M, N, h_r.shape)
+    assert h_r.shape == (
+        M, N), 'The shape of h_r needs to be ({}, {}), instead of {}'.format(M, N, h_r.shape)
 
     As = np.zeros((M, N + P + 1, P))
     for i in range(M):
