@@ -1,0 +1,10 @@
+version: "2"
+services:
+  notebook:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - 8888:8888
+    command: bash -c "jupyter lab --ip=0.0.0.0 --allow-root"
